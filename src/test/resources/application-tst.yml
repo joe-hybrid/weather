@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: test
+    password: test
+    hikari:
+      # avoid to many connections in tests to the database
+      maximum-pool-size: 2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+swagger:
+  host: "localhost:${server.port}"
+
+open-weather-api:
+  host: localhost:8080/dummy
+  appid: 123456

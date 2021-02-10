@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    # In environments other than local, the following properties should
+    # be stored as encrypted secrets and set via environment variables
+    url: jdbc:h2:mem:devdb
+    username: dev
+    password: dev
+
+swagger:
+  host: "localhost:${server.port}"
+
+open-weather-api:
+  host: api.openweathermap.org/data/2.5/weather
+  # In environments other than local, the following property should
+  # be stored as encrypted secret and set via environment variable
+  appid: 891996a1541c0edce87e1e656ff7a75c
